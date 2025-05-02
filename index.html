@@ -2,73 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pay Fine</title>
+  <title>Pay Fine - Tamil Nadu Traffic Violations</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f7f8fa, #d6e4f0);
+      margin: 0;
       padding: 40px;
       text-align: center;
     }
 
+    .container {
+      background-color: #ffffff;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
     h1 {
-      color: #333;
-      margin-bottom: 20px;
+      color: #1f3b73;
+      margin-bottom: 25px;
+      font-size: 36px;
+    }
+
+    h2 {
+      color: #2a4d8f;
+      margin-top: 30px;
+      font-size: 24px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
     }
 
     ul {
       text-align: left;
-      display: inline-block;
-      margin-bottom: 30px;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333;
     }
 
     ul li {
-      margin: 8px 0;
-      font-size: 18px;
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 30px;
       font-size: 18px;
-      background-color: #007bff;
-      color: white;
+      background-color: #1f3b73;
+      color: #fff;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #3c5aa6;
     }
 
     #message {
-      margin-top: 20px;
-      font-size: 20px;
-      color: green;
+      margin-top: 25px;
+      font-size: 22px;
       font-weight: bold;
+      color: green;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    #message.show {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
 
-  <h1>Pay fine</h1>
+  <div class="container">
+    <h1>Pay Fine - Tamil Nadu Traffic Violations</h1>
 
-  <ul>
-    <li>Over-speeding - ₹500</li>
-    <li>No Helmet - ₹100</li>
-    <li>Signal Jumping - ₹300</li>
-    <li>Wrong Parking - ₹200</li>
-    <li>Using Mobile While Driving - ₹1000</li>
-  </ul>
+    <h2>General Violations</h2>
+    <ul>
+      <li>Driving Without a Valid License – ₹5,000</li>
+      <li>Driving Without Valid Insurance – ₹2,000</li>
+      <li>Driving Without Registration Certificate – ₹5,000</li>
+      <li>Driving Without Pollution Certificate – ₹10,000</li>
+      <li>Disobeying Traffic Police Instructions – ₹2,000</li>
+    </ul>
 
-  <br>
-  <button onclick="payFine()">Pay Now</button>
+    <h2>Two-Wheeler Specific Violations</h2>
+    <ul>
+      <li>Riding Without a Helmet – ₹1,000 and 3-month DL suspension</li>
+      <li>Triple Riding – ₹2,000 and 3-month DL suspension</li>
+    </ul>
 
-  <div id="message"></div>
+    <h2>Four-Wheeler Specific Violations</h2>
+    <ul>
+      <li>Driving Without Seatbelt – ₹1,000 and/or community service</li>
+      <li>Overloading Passengers – ₹200 per extra passenger</li>
+    </ul>
+
+    <h2>Serious Offenses</h2>
+    <ul>
+      <li>Drunk Driving – ₹10,000 and/or 6 months imprisonment</li>
+      <li>Using Mobile While Driving – ₹1,000 (first offense), ₹10,000 (repeat offense)</li>
+      <li>Rash and Negligent Driving – ₹5,000</li>
+      <li>Juvenile Offenses – ₹25,000 and up to 3 years imprisonment</li>
+    </ul>
+
+    <h2>Other Violations</h2>
+    <ul>
+      <li>Overspeeding – ₹1,000 (LMV), ₹2,000 (MMV)</li>
+      <li>Jumping Red Light – ₹1,000 to ₹5,000</li>
+      <li>Obstructing Emergency Vehicles – ₹10,000</li>
+      <li>Driving Without Permit – ₹10,000</li>
+      <li>Entering No Entry Zone – ₹2,000 to ₹5,000</li>
+    </ul>
+
+    <button onclick="payFine()">Pay Now</button>
+    <div id="message">Paid successfully ✅</div>
+  </div>
 
   <script>
     function payFine() {
-      document.getElementById('message').innerText = "Paid successfully";
+      const message = document.getElementById('message');
+      message.classList.add('show');
     }
   </script>
 
