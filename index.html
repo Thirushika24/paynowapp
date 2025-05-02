@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pay Fine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    ul li {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pay fine</h1>
+
+  <ul>
+    <li>Over-speeding - ₹500</li>
+    <li>No Helmet - ₹100</li>
+    <li>Signal Jumping - ₹300</li>
+    <li>Wrong Parking - ₹200</li>
+    <li>Using Mobile While Driving - ₹1000</li>
+  </ul>
+
+  <br>
+  <button onclick="payFine()">Pay Now</button>
+
+  <div id="message"></div>
+
+  <script>
+    function payFine() {
+      document.getElementById('message').innerText = "Paid successfully";
+    }
+  </script>
+
+</body>
+</html>
